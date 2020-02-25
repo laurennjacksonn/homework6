@@ -18,15 +18,21 @@
 	}
 
 	/*Use CSS before property to display the image before the text in the buttons*/
+	button.play::before{
+		content: url("img/play.png");
+	}
 
+	button.pause::before{
+		content: url("img/pause.png");
+	}
 	
 </style>
 </head>
 <body onload = "getVid()"> 
 <main>
 	<h1>JavaScript Video Controls</h1>
-	<button onclick="playVid()" type="button" class = "play">Play Video</button>
-	<button onclick="pauseVid()" type="button" class = "pause">Pause Video</button><br>
+	<button onclick="playVid()" type="button" class = "play">Play Video </button>
+	<button onclick="pauseVid()" type="button" class = "pause">Pause Video </button><br>
 	<button onclick="decreaseSpeed()" type="button">Slow Down</button>
 	<button onclick="increaseSpeed()" type="button">Speed Up</button><br>
 	<button onclick="skipAhead()" type="button">Skip Ahead</button><br>
@@ -39,7 +45,7 @@
 	  	Your browser does not support HTML5 video.
 	</video> -->
 	<video id="myVideo">
-	<source src="https://download.blender.org/peach/bigbuckbunny_movies/	big_buck_bunny_480p_stereo.ogg" />
+	<source src="https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg" />
   	Your browser does not support HTML5 video.
   <!-- I do not have captions - it was causing an error that I could not fix. -->
 	</video>
